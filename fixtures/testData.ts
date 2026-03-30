@@ -1,0 +1,177 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+export const testData = {
+    // Admin credentials
+    admin: {
+          email: process.env.ADMIN_EMAIL || 'alaa.ramadan+ai@alweb.com',
+          password: process.env.ADMIN_PASSWORD || 'Test@1234',
+    },
+
+    // University Challenge Coordinator — TBD when developed
+    universityCoordinator: {
+          email: process.env.UNI_COORD_EMAIL || 'TBD',
+          password: process.env.UNI_COORD_PASSWORD || 'TBD',
+    },
+
+    // Start-Up Challenge Coordinator — TBD when developed
+    startupCoordinator: {
+          email: process.env.STARTUP_COORD_EMAIL || 'TBD',
+          password: process.env.STARTUP_COORD_PASSWORD || 'TBD',
+    },
+
+    // URLs
+    urls: {
+          adminPanel: process.env.ADMIN_URL || 'https://admin.stg.alweb4tech.com/',
+          networkChallengeEN: 'https://gca.stg.alweb4tech.com/en/Network-Challenge',
+          networkChallengeAR: 'https://gca.stg.alweb4tech.com/Network-Challenge',
+          universitiesChallengeEN: 'https://gca.stg.alweb4tech.com/en/universities-challenge',
+          universitiesChallengeAR: 'https://gca.stg.alweb4tech.com/universities-challenge',
+          startupChallengeEN: 'https://gca.stg.alweb4tech.com/en/Start-Up-Challenge',
+          startupChallengeAR: 'https://gca.stg.alweb4tech.com/Start-Up-Challenge',
+          gcaMainEN: 'https://gca.stg.alweb4tech.com/en',
+          gcaMainAR: 'https://gca.stg.alweb4tech.com/ar',
+    },
+
+    // Sample Network Challenge applicant data
+    networkApplicant: {
+          firstNameEN: 'John',
+          secondNameEN: 'Michael',
+          lastNameEN: 'Smith',
+          firstNameAR: 'محمد',
+          secondNameAR: 'أحمد',
+          lastNameAR: 'علي',
+          nationality: 'Jordanian',
+          country: 'UAE',
+          contactNumber: '0501234567',
+          entityName: 'Test Entity',
+          jobTitle: 'Engineer',
+          gender: 'Male',
+          poBox: '12345',
+          email: 'network.test@test.com',
+          networkMember: 'No',
+          centerName: '',
+          branchName: '',
+          note: 'Test application note',
+    },
+
+    // Sample University Challenge applicant data
+    universityApplicant: {
+          universityNameEN: 'Test University',
+          collegeNameEN: 'Test College',
+          coordinatorNameEN: 'John Smith',
+          universityNameAR: 'جامعة الاختبار',
+          collegeNameAR: 'كلية الاختبار',
+          coordinatorNameAR: 'محمد علي',
+          contactNumber: '0501234567',
+          coordinatorNumber: '0507654321',
+          numberOfTeams: '5',
+          country: 'UAE',
+          poBox: '54321',
+          email: 'university.test@test.com',
+          note: 'Test university application',
+    },
+
+    // Sample Start-Up Challenge applicant data
+    startupApplicant: {
+          firstNameEN: 'Sarah',
+          secondNameEN: 'Jane',
+          lastNameEN: 'Doe',
+          firstNameAR: 'سارة',
+          secondNameAR: 'جين',
+          lastNameAR: 'دو',
+          nationality: 'Emirati',
+          country: 'UAE',
+          contactNumber: '0509876543',
+          entityName: 'Startup Co',
+          jobTitle: 'Founder',
+          gender: 'Female',
+          poBox: '99999',
+          email: 'startup.test@test.com',
+          rubaaQarnMember: 'No',
+          centerName: '',
+          branchName: '',
+          note: 'Test startup application',
+    },
+
+    // Sample new entity for Network Challenge
+    networkEntity: {
+          arabicName: 'مركز الاختبار',
+          englishName: 'Test Center',
+          email: 'center@test.com',
+          phoneNumber: '0501111111',
+          country: 'UAE',
+          isMember: 'Yes',
+          centerName: 'Main Center',
+    },
+
+    // Expected UI text — English
+    textEN: {
+          challengeAwardTab: 'Challenge Award',
+          networkChallenge: 'Network Challenge',
+          universitiesChallenge: 'Universities Challenge',
+          startupChallenge: 'Start-Up Challenge',
+          applicationLink: 'Application Link',
+          copyBtn: 'Copy',
+          resetBtn: 'Reset',
+          downloadExcel: 'Download Excel File',
+          approveBtn: 'Approve',
+          rejectBtn: 'Reject',
+          backToMenu: 'Back to Menu',
+          submissionDetails: 'Submission Details',
+          pageTitle: 'Welcome to SGCA Award',
+          submitBtn: 'Submit',
+          saveBtn: 'Save',
+          statusApproved: 'Approved',
+          statusRejected: 'Rejected',
+          statusPending: 'Pending',
+          statusActive: 'Active',
+          statusInactive: 'Inactive',
+          confirmPopup: 'Are you sure you want to apply for this award?',
+          successTitle: 'Your application has been successfully received!!',
+          duplicateError: 'Sorry! You have already submitted an application for the Award Challenge. Only one submission is permitted per applicant.',
+          fieldRequired: 'This field is required',
+          notFound: 'Page Not Found',
+          goToGCA: 'Go to GCA Website',
+          networkExcelName: 'Network Challenge Data',
+          universitiesExcelName: 'Universities Challenge Data',
+          startupExcelName: 'Start-Up Challenge Data',
+          uniCoordRole: 'University Challenge Coordinator',
+          startupCoordRole: 'Start-Up Challenge Coordinator',
+    },
+
+    // Expected UI text — Arabic
+    textAR: {
+          challengeAwardTab: 'جائزة التحدي',
+          networkChallenge: 'تحدي الشبكات',
+          universitiesChallenge: 'تحدي الجامعات',
+          startupChallenge: 'تحدي الناشئات',
+          applicationLink: 'رابط التسجيل',
+          copyBtn: 'نسخ',
+          resetBtn: 'إعادة تعيين',
+          downloadExcel: 'تحميل ملف إكسل',
+          approveBtn: 'موافق',
+          rejectBtn: 'مرفوض',
+          backToMenu: 'العودة الى القائمة',
+          submissionDetails: 'تفاصيل الطلب',
+          pageTitle: 'مرحبا بكم في جائزة الشارقة للاتصال الحكومي',
+          submitBtn: 'إرسال',
+          saveBtn: 'حفظ',
+          statusApproved: 'مقبول',
+          statusRejected: 'مرفوض',
+          statusPending: 'قيد الانتظار',
+          statusActive: 'مفعل',
+          statusInactive: 'غير مفعل',
+          confirmPopup: 'هل أنت متأكد من رغبتك في إرسال الطلب؟',
+          successTitle: 'لقد تم استلام طلبك بنجاح!!',
+          duplicateError: 'عذراً! لقد قمت بالفعل بتقديم طلب لهذا التحدي. يُسمح بطلب واحد فقط لكل مشترك.',
+          fieldRequired: 'هذا الحقل مطلوب',
+          notFound: 'الصفحة غير موجودة',
+          goToGCA: 'العودة إلى موقع جائزة الشارقة لإتصال الحكومي',
+          networkExcelName: 'بيانات تحدي الشبكات',
+          universitiesExcelName: 'بيانات تحدي الجامعات',
+          startupExcelName: 'بيانات تحدي الناشئات',
+          uniCoordRole: 'مسؤول تحدي الجامعات',
+          startupCoordRole: 'مسؤول تحدي الناشئات',
+    },
+};
