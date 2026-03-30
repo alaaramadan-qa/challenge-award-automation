@@ -1,0 +1,25 @@
+{
+  "name": "challenge-award-automation",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript automation for GCA Challenge Award Epic (SP-1964)",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:lang-en": "npx playwright test --grep @lang-en",
+    "test:lang-ar": "npx playwright test --grep @lang-ar",
+    "test:e2e": "npx playwright test --grep @e2e",
+    "test:seo": "npx playwright test --grep @seo",
+    "test:negative": "npx playwright test --grep @negative",
+    "test:network": "npx playwright test tests/challenge-award/02-network-challenge-admin.spec.ts tests/challenge-award/03-network-challenge-user.spec.ts",
+    "test:universities": "npx playwright test tests/challenge-award/04-universities-challenge-admin.spec.ts tests/challenge-award/05-universities-challenge-user.spec.ts",
+    "test:startup": "npx playwright test tests/challenge-award/06-startup-challenge-admin.spec.ts tests/challenge-award/07-startup-challenge-user.spec.ts",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
